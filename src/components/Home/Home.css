@@ -1,0 +1,112 @@
+.Home__main-article{
+    background-color: rgb(55, 59, 59);
+    color: white;
+    padding-bottom: 20px;
+    margin: auto;
+    width: 100%;
+}
+.Home__main-profile{
+    color: white;
+    margin: auto;
+}
+.Home__Profile-name{
+    text-shadow: 4px 2px #2c2c2b;
+}
+
+.Home__Profile-role{
+    margin-bottom: 15px;
+    color: #CCCDCC;
+}
+
+.Home__thumbnail{
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+
+}
+
+.Skills__Main-container{
+    transition: 0.5s;
+}
+.Skills__Title{
+    width: 90%;
+    display: inline-flex;    
+    text-align: left;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgb(83, 83, 83);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Skills__Svg{
+    color: white;
+    margin-left: 20px;
+    width: 24px;
+    height: 24px; 
+}
+.Skills__Text{
+    margin: 0;
+    margin-left: 20px;
+}
+
+
+.Skill__Container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.Skills__Master{
+    padding: 5px;
+    background-color: rgb(71, 82, 75);
+    margin: 5px;
+    border-radius: 30px;
+}
+
+.Skills__Expert{
+    padding: 5px;
+    background-color: rgb(64, 85, 72);
+    margin: 5px;
+    border-radius: 30px;
+}
+
+.Skills__Show-btn{
+    font-size: 1.7rem;
+    color: white;
+    width: 80%;
+    margin: auto;
+    border: none;
+    background-color: #5E8F4B;
+    border-radius: 30px;
+    display: inline-flex;
+}
+
+.Dropdown {
+    height: 40px;
+}
+
+.Complete {
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.Skills__Drop-Icon{
+    width: 30px;
+    height: 30px;
+    margin: auto;
+}
+
+.Loading__Main{
+    margin: auto;
+    width: 80%;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgb(78, 78, 78);
+    border-radius: 60px;
+    margin-bottom: 50%;
+
+}

@@ -1,0 +1,30 @@
+.Land__Main{
+    position: absolute;
+    top: 40%;
+    height: 100%;
+    width: 100%;
+}
+.Land__Title-main{
+    display: inline-flex;
+    color: white;
+    font-size: 5rem;
+}
+.Land__Title-sub{
+    font-size: 3rem;
+    color: #b8c34d;
+}
+
+.Land__Button{
+    font-size: 1.2rem;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: grey;
+
+}
+.Land__Button:hover{
+
+    background-color: rgb(160, 155, 155);
+
+}

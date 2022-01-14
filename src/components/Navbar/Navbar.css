@@ -1,0 +1,66 @@
+.Navbar__main{
+    transition: 0.4s;
+}
+
+.NavBar{
+    width: 100%;
+    margin-top: 0;
+    background-color: #27292d;
+    padding: 15px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.Nav-color{
+    background-color: #27292d;
+}
+
+.NavBar__One{
+    display: inline-flex;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.Navbar__Toggle{
+    height: 100%;
+    margin: auto;
+}
+.Navbar__Icon-btn{
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+}
+
+.NavBar__Item-Two{
+    height: 100%;
+    margin: auto;
+    display: inline-flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.Navbar__Search{
+    padding-right: 10px;
+}
+.Navbar__Input{
+    padding: 20px;
+    transition: 0.4s;
+    background-color: #35363a;
+}
+
+.Navbar__Redirect{
+
+    text-decoration: none;
+    color: #5E8F4B;
+}
+
+.NavBar__Item-home{
+    padding-left: 15px;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.Nav-display{
+    display: none;
+    transition: 0.4s;
+}
