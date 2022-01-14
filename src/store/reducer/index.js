@@ -1,4 +1,4 @@
-import { FETCH_USER, FETCH_USER_EXPERIENCES, FETCH_USER_SKILLS } from "../actions";
+import { FETCH_USER, FETCH_USER_EXPERIENCES, FETCH_USER_SKILLS, SET_TOAST } from "../actions";
 
 
 const initialState = {
@@ -9,7 +9,8 @@ const initialState = {
     experiences : {
         personal : [],
         api : []
-    }
+    },
+    snack: ''
 }
 
 export default function reducer(state = initialState, action){
@@ -56,6 +57,11 @@ export default function reducer(state = initialState, action){
                     api : action.payload[1]
                 }
             }
+
+            case SET_TOAST: return{
+                ...state,
+                snack : action.payload
+            }                
 
         default: 
         console.log('Estoy entrando acá');

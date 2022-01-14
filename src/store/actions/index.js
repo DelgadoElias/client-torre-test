@@ -1,5 +1,7 @@
 import axios from "axios";
+import testFunction from "../../functions/testFunction";
 
+export const SET_TOAST = 'SET_TOAST'
 
 export const FETCH_USER = 'FETCH_USER'
 export const FETCH_USER_SKILLS = 'FETCH_USER_SKILLS'
@@ -15,6 +17,8 @@ export function fetchUsers(publicId){
             })
         } catch (e) {
             console.log(e)
+            testFunction()
+            console.log('SE CAE TODO');
         }
         
     }
@@ -29,6 +33,7 @@ export function fetchUserSkills(publicId){
             payload: poder.data
             })
         } catch (e) {
+            testFunction()
             console.log(e)
         }
         
@@ -44,8 +49,17 @@ export function fetchUserExperiences(publicId){
             payload: poder.data
             })
         } catch (e) {
+            testFunction()
             console.log(e)
         }
         
     }
 }
+
+export function setToast(data){
+    return (dispatch) => {
+      dispatch({ type: SET_TOAST, payload: data})
+    }
+  }
+
+  
