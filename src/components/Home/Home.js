@@ -168,14 +168,15 @@ export default function Home() {
 
                 return (
                   <section className="Exp__Container">
+                    <hr />
                     <div className="">
-                    <p className="Exp__Title">{x.name !== undefined ? x.name : 'Error'}</p>
+                    <p className="Exp__Title">{x.name !== undefined ? x.name : ''}</p>
                     </div>
                     <div>
                     <span>{x.organizations.length === 0 ? 'Not Found' : x.organizations[0].name }</span>
                     </div>
                     <div>
-                      {x.fromMonth ? x.fromMonth : 'Month' } {x.fromYear ? x.fromYear : 'Year'} - {x.toMonth ? x.toMonth : 'Present' } {x.toYear !== undefined ? x.toYear : 'Error'} 
+                      {x.fromMonth ? x.fromMonth : 'Month' } {x.fromYear ? x.fromYear : 'Year'} - {x.toMonth ? x.toMonth : '' } {x.toYear !== undefined ? x.toYear : ''} 
                     </div>
                   </section>
                 )
