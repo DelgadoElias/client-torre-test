@@ -1,11 +1,15 @@
-import { FETCH_USER, FETCH_USER_SKILLS } from "../actions";
+import { FETCH_USER, FETCH_USER_EXPERIENCES, FETCH_USER_SKILLS } from "../actions";
 
 
 const initialState = {
     person : {
         publicId: ''
     },
-    skills : []
+    skills : [],
+    experiences : {
+        personal : [],
+        api : []
+    }
 }
 
 export default function reducer(state = initialState, action){
@@ -40,6 +44,18 @@ export default function reducer(state = initialState, action){
                     novice
                 }
             };
+
+            case FETCH_USER_EXPERIENCES:
+                console.log('PERSONAL', action.payload[0]);
+                console.log('API', action.payload[1]);
+
+            return {
+                ...state,
+                experiences: {
+                    personal : action.payload[0],
+                    api : action.payload[1]
+                }
+            }
 
         default: 
         console.log('Estoy entrando acá');

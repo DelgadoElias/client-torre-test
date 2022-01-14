@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './Navbar.css'
 import {Link} from 'react-router-dom'
 import { useDispatch } from "react-redux";
-import { fetchUsers, fetchUserSkills } from "../../store/actions";
+import { fetchUserExperiences, fetchUsers, fetchUserSkills } from "../../store/actions";
 
 export default function Navbar(){
     
@@ -24,6 +24,7 @@ export default function Navbar(){
         e.preventDefault()
         dispatch(fetchUsers(search))
         dispatch(fetchUserSkills(search))
+        dispatch(fetchUserExperiences(search))
 
         console.log(search);
         setSearch('')

@@ -10,6 +10,14 @@ export default function Home() {
     return state.skills;
   });
 
+  const ExpPersonal = useSelector((state) => {
+    return state.experiences.personal;
+  })
+
+  const ExpAPI = useSelector((state) => {
+    return state.experiences.api;
+  })
+
   const [drop, setDrop] = useState(false)
   const [dropIcon, setDropIcon] = useState('https://img.icons8.com/ios/50/ffffff/plus--v1.png')
   const [show, setShow] = useState('Skills__Main-container Dropdown')
@@ -33,7 +41,7 @@ export default function Home() {
     <article className="Home__sizing">
 
     <article className="Home__main-article">
-      {usersz.publicId === "" ? (
+    {usersz.publicId === "" ? (
         <section className="animted fadeIn fast">
           <div className="Loading__Main">
           <h1>Search a user to start</h1>
@@ -45,6 +53,7 @@ export default function Home() {
           
         </section>
       ) : (
+        <div>
           <article className="animated fadeIn fast">
         <section className="Home__main-profile">
           <div>
@@ -77,8 +86,8 @@ export default function Home() {
               </svg>
             </div>
           </div>
-            <h1 className="Home__Profile-name">{usersz.name}</h1>
-            <h5 className="Home__Profile-role">{usersz.professionalHeadline}</h5>
+            <h1 className="Home__Profile-name">{usersz.name ? usersz.name : 'Not Found' }</h1>
+            {/* <h5 className="Home__Profile-role">{usersz.professionalHeadline ? usersz.professionalHeadline : 'Not Found'}</h5> */}
         </section>
         <section className={show}>
             <div onClick={dropSkills} className="Skills__Show-btn">
@@ -92,7 +101,10 @@ export default function Home() {
             </div>
             <div className="Skill__Container">
             {
+              skills.master !== undefined ?
               skills.master.map((x) => { return <span className="Skills__Master">{x.name}</span> })
+              :
+              <span className="Skills__Master">Error - Please Try Again</span>
             }
             </div>
             <div className="Skills__Title">
@@ -103,7 +115,10 @@ export default function Home() {
 
             <div className="Skill__Container">
             {
+              skills.expert !== undefined ?
               skills.expert.map((x) => { return <span className="Skills__Expert">{x.name}</span> })
+              :
+              <span className="Skills__Expert">:c</span>
             }
             </div>
             <div className="Skills__Title">
@@ -113,8 +128,10 @@ export default function Home() {
             </div>
              <div className="Skill__Container">
             {
+              skills.proficient !== undefined ? 
               skills.proficient.map((x) => { return <span className="Skills__Expert">{x.name}</span> })
-
+              :
+              <span className="Skills__Expert">:P</span>
             }
              </div>
              <div className="Skills__Title">
@@ -125,13 +142,45 @@ export default function Home() {
 
             <div className="Skill__Container">
             {
+              skills.novice !== undefined ?
               skills.novice.map((x) => { return <span className="Skills__Expert">{x.name}</span> })
-
+              :
+              <span className="Skills__Expert">:O</span>
             }
             </div>
-        </section>
+        </section>   
         </article>
+        </div>
       )}
+    </article>
+    <article className="Exp__Main">
+            {
+              usersz.publicId === '' ?
+              ''
+              :
+              <h5>Related Experiences</h5> 
+              
+            }
+            {
+              ExpAPI.length === 0 ? <span>No experiences :c</span> 
+              :
+              ExpAPI.map((x) => {
+
+                return (
+                  <section className="Exp__Container">
+                    <div className="">
+                    <p className="Exp__Title">{x.name !== undefined ? x.name : 'Error'}</p>
+                    </div>
+                    <div>
+                    <span>{x.organizations.length === 0 ? 'Not Found' : x.organizations[0].name }</span>
+                    </div>
+                    <div>
+                      {x.fromMonth ? x.fromMonth : 'Month' } {x.fromYear ? x.fromYear : 'Year'} - {x.toMonth ? x.toMonth : 'Present' } {x.toYear !== undefined ? x.toYear : 'Error'} 
+                    </div>
+                  </section>
+                )
+              })
+            }
     </article>
     </article>
 

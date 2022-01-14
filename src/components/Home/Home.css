@@ -1,5 +1,5 @@
 .Home__main-article{
-    background-color: rgb(55, 59, 59);
+    background-color: #27292d;
     color: white;
     padding-bottom: 20px;
     margin: auto;
@@ -10,7 +10,7 @@
     margin: auto;
 }
 .Home__Profile-name{
-    text-shadow: 4px 2px #2c2c2b;
+    text-shadow: 4px 2px #27292d;
 }
 
 .Home__Profile-role{
@@ -35,8 +35,6 @@
     align-items: center;
     font-size: 1.3rem;
     padding: 10px;
-    border-radius: 30px;
-    background-color: rgb(83, 83, 83);
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -62,14 +60,14 @@
 
 .Skills__Master{
     padding: 5px;
-    background-color: rgb(71, 82, 75);
+    background-color: #373b41;
     margin: 5px;
     border-radius: 30px;
 }
 
 .Skills__Expert{
     padding: 5px;
-    background-color: rgb(64, 85, 72);
+    background-color: #373b41;
     margin: 5px;
     border-radius: 30px;
 }
@@ -80,13 +78,14 @@
     width: 80%;
     margin: auto;
     border: none;
-    background-color: #5E8F4B;
+    background-color: #373b41;
     border-radius: 30px;
     display: inline-flex;
 }
 
 .Dropdown {
     height: 40px;
+    overflow: hidden;
 }
 
 .Complete {
@@ -109,4 +108,21 @@
     border-radius: 60px;
     margin-bottom: 50%;
 
+}
+
+.Exp__Main{
+    color: white;
+}
+
+.Exp__Container{
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.Exp__Title{
+    color: #abb836;
+    margin: 0;
 }
