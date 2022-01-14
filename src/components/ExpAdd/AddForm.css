@@ -1,0 +1,21 @@
+.Add__Form-container{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    background-color: #35363a;
+
+}
+
+.Add__Form-Item{
+    margin: 10px;
+    padding: 10px;
+}
+
+.Add__Form-btn{
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background-color: cadetblue;
+}

@@ -43,9 +43,11 @@ export default function Navbar(){
         <article className="NavBar">
             <section className="NavBar__One">
                 <div className="Navbar__Toggle">
+                    <Link to="/add">
                     <button className="Navbar__Icon-btn">
-                        <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#5E8F4B" d="M4 22h-4v-4h4v4zm0-12h-4v4h4v-4zm0-8h-4v4h4v-4zm3 0v4h17v-4h-17zm0 12h17v-4h-17v4zm0 8h17v-4h-17v4z"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#5E8F4B" d="M13 2v9h9v2h-9v9h-2v-9h-9v-2h9v-9h2zm2-2h-6v9h-9v6h9v9h6v-9h9v-6h-9v-9z"/></svg>
                     </button>
+                    </Link>
                 </div>
                 <div>
                     <Link className="Navbar__Redirect" to="/home">
@@ -60,9 +62,7 @@ export default function Navbar(){
                     </button>
                 </div>
                 <div className="Navbar__Redirect">
-                    <Link className="Navbar__Redirect" to="/home">
-                    <span href="https://accounts.torre.co/email/?next=/openid/authorize%3Fscope%3Dopenid%2Bprofile%2Bemail%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Ftorre.co%252Fcallback%253Fclient_name%253Dstarrgate%26state%3Dg-lTpXsoOBN3Y_vTRpjy3PiFszHLmPl9mxX3EQgeVTI%26intent%3Dhome%253Asign-in%26client_id%3D541493" className="">SIGN IN</span>
-                    </Link>
+                    <a className="Navbar__Redirect" href="https://accounts.torre.co/email/?next=/openid/authorize%3Fscope%3Dopenid%2Bprofile%2Bemail%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Ftorre.co%252Fcallback%253Fclient_name%253Dstarrgate%26state%3Dg-lTpXsoOBN3Y_vTRpjy3PiFszHLmPl9mxX3EQgeVTI%26intent%3Dhome%253Asign-in%26client_id%3D541493">SIGN IN</a>
                 </div>
             </section>
      </article>

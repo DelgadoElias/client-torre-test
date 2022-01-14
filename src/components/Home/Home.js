@@ -183,6 +183,31 @@ export default function Home() {
                 )
               })
             }
+            {
+              ExpPersonal.length === 0 ? <span>No experiences :c</span> 
+              :
+              ExpPersonal.map((x) => {
+
+                return (
+                  <section className="Exp__Container">
+                    <hr />
+                    <div className="">
+                    <p className="Exp__Title">{x.name !== undefined ? x.name : ''}</p>
+                    </div>
+                    <div>
+                    <span>{x.organization ? x.organization : 'Not Found'  }</span>
+                    </div>
+                    <div>
+                      {x.fMonth ? x.fMonth : 'Month' } {x.fYear ? x.fYear : 'Year'} - {x.tMonth ? x.tMonth : '' } {x.tYear !== undefined ? x.tYear : ''} 
+                    </div>
+                  </section>
+                )
+              })
+            }
+            <div className="Block">
+
+            </div>
+
     </article>
     </article>
 

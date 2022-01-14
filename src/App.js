@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import Landing from './components/Landing/Landing';
 import Toast from './components/Tools/Toast';
 import { useSelector } from 'react-redux';
+import AddForm from './components/ExpAdd/AddForm';
 
 function App() {
 
@@ -27,6 +28,15 @@ function App() {
           <Home></Home>
         </div>
                                     }>
+        </Route>
+
+        <Route path="/add" element={
+          <div>
+          <Navbar></Navbar>
+          <AddForm></AddForm>
+        </div>
+        }>
+
         </Route>
 
       </Routes>

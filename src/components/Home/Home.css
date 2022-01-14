@@ -127,6 +127,10 @@
     margin: 0;
 }
 
+.Block{
+    margin-bottom: 40px;
+}
+
 @media (min-width: 700px) {
 
     .Home__main-article{
@@ -147,12 +151,17 @@
     .Skills__Show-btn{
         font-size: 1.7rem;
         color: white;
-        width: 40%;
+        width: 50%;
         margin: auto;
         border: none;
         background-color: #373b41;
         border-radius: 30px;
         display: inline-flex;
+    }
+
+    .Dropdown {
+        height: 50px;
+        overflow: hidden;
     }
 
 
