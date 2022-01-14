@@ -11,11 +11,15 @@
 .Add__Form-Item{
     margin: 10px;
     padding: 10px;
+    background-color: transparent;
+    text-decoration:  underline solid rgb(85, 77, 77);
+    border: none;
 }
 
 .Add__Form-btn{
     margin: 10px;
     padding: 10px;
     border: none;
-    background-color: cadetblue;
+    background-color: #5E8F4B;
+    border-radius: 5px;
 }

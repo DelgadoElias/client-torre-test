@@ -163,7 +163,7 @@ export default function Home() {
               
             }
             {
-              ExpAPI.length === 0 ? <span>No experiences :c</span> 
+              ExpAPI.length === 0 ? '' 
               :
               ExpAPI.map((x) => {
 
@@ -184,7 +184,7 @@ export default function Home() {
               })
             }
             {
-              ExpPersonal.length === 0 ? <span>No experiences :c</span> 
+              ExpPersonal.length === 0 ? '' 
               :
               ExpPersonal.map((x) => {
 
