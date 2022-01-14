@@ -109,3 +109,16 @@
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
   }
+
+
+  .Navbar__Input-btn{
+      padding: 10px;
+      background-color: #5E8F4B;
+      border: none;
+  }
+
+  .Navbar__Input-text{
+    padding: 10px;
+    width: 70%;
+    border: none;
+}

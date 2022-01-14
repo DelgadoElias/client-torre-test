@@ -126,3 +126,34 @@
     color: #abb836;
     margin: 0;
 }
+
+@media (min-width: 700px) {
+
+    .Home__main-article{
+        background-color: #27292d;
+        color: white;
+        padding-bottom: 20px;
+        width: 40%;
+    }
+
+
+    .Home__thumbnail{
+        padding: 20px;
+        margin: auto;
+        width: 60%;
+    
+    }
+
+    .Skills__Show-btn{
+        font-size: 1.7rem;
+        color: white;
+        width: 40%;
+        margin: auto;
+        border: none;
+        background-color: #373b41;
+        border-radius: 30px;
+        display: inline-flex;
+    }
+
+
+ }
