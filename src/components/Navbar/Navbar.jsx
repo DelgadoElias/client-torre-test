@@ -8,9 +8,10 @@ import Icons from '../Tools/Icons/Icons';
 /**
  * Navbar react Component.
  * @param {useDispatch} dispatch - Redux - Dispatch functions to the reducer.
- * @param {Object} action.payload - Contains data to be used in the reducer.
- * @param {Object} action.action - Contain the action to switch in reducer.
- * @return {object} - Dispatch the object to the reducer.
+ * @param {useState} bool - State for dropdown management.
+ * @param {useState} display - State for dropdown management(CSS).
+ * @param {useState} search - Contain the action to switch in reducer.
+ * @return {HTML} - Display HTML Elements in App.
  */
 export default function Navbar() {
   const dispatch = useDispatch();
