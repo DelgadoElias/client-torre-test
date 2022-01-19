@@ -142,7 +142,7 @@
     }
     .Skills__Section-container:hover{
         transition: 0.4s;
-        box-shadow: 4px 4px #3d423d;
+        box-shadow: 4px 4px 8px #3d423d;
     }
 
     .Exp__Tile-text{
