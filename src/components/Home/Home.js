@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
+import Constants from '../Tools/constants/constants';
 import './Home.css';
 
 /**
  * Home react Component.
+ * Using constants for better code con
  * @param {useSelector} usersz - Get user of redux.
  * @param {useSelector} skills - Get user's skills of redux.
  * @param {useSelector} ExpPersonal - Get user's experience of redux(in DB).
@@ -28,8 +30,11 @@ export default function Home() {
     return state.experiences.api;
   });
 
+  /**
+   * Using constants file here ->
+   */
   const [drop, setDrop] = useState(false);
-  const [dropIcon, setDropIcon] = useState('https://img.icons8.com/ios/50/ffffff/plus--v1.png');
+  const [dropIcon, setDropIcon] = useState(Constants.homeDropIcon.plus);
   const [show, setShow] = useState('Skills__Main-container Dropdown');
 
   /**
@@ -43,14 +48,15 @@ export default function Home() {
     setDrop(!drop);
     if (drop === true) {
       setShow('Skills__Main-container Complete');
-      setDropIcon('https://img.icons8.com/ios/50/ffffff/minus.png');
+      setDropIcon(Constants.homeDropIcon.minus);
     } else {
       setShow('Skills__Main-container Dropdown');
-      setDropIcon('https://img.icons8.com/ios/50/ffffff/plus--v1.png');
+      setDropIcon(Constants.homeDropIcon.plus);
     }
   }
 
-
+  // TODO: Move to a presentacional Component
+  // TODO: Create three components: User, UserXperience & Search user for start
   return (
     <article className="Home__sizing">
 
@@ -110,8 +116,9 @@ export default function Home() {
               </div>
 
               <div className="Skills__Title">
-                <img className="Skills__Svg" src="https://img.icons8.com/ios/50/ffffff/cycling-bmx.png"/>
-                <p className="Skills__Text">Master/Influencer</p>
+                <img className="Skills__Svg" 
+                  src={Constants.skills.master.icon}/>
+                <p className="Skills__Text">{Constants.skills.master.name}</p>
               </div>
               <div className="Skill__Container">
                 {
@@ -124,8 +131,9 @@ export default function Home() {
                 }
               </div>
               <div className="Skills__Title">
-                <img className="Skills__Svg" src="https://img.icons8.com/ios-filled/50/ffffff/running.png"/>
-                <p className="Skills__Text">Expert</p>
+                <img className="Skills__Svg" 
+                  src={Constants.skills.expert.icon}/>
+                <p className="Skills__Text">{Constants.skills.expert.name}</p>
               </div>
 
               <div className="Skill__Container">
@@ -140,8 +148,11 @@ export default function Home() {
                 }
               </div>
               <div className="Skills__Title">
-                <img className="Skills__Svg" src="https://img.icons8.com/material-outlined/24/ffffff/walking--v1.png"/>
-                <p className="Skills__Text">Competitive</p>
+                <img className="Skills__Svg"
+                  src={Constants.skills.competitive.icon} />
+                <p className="Skills__Text">
+                  {Constants.skills.competitive.name}
+                </p>
 
               </div>
               <div className="Skill__Container">
@@ -155,8 +166,9 @@ export default function Home() {
                 }
               </div>
               <div className="Skills__Title">
-                <img className="Skills__Svg" src="https://img.icons8.com/ios-filled/50/ffffff/baby-feet.png"/>
-                <p className="Skills__Text">Novice</p>
+                <img className="Skills__Svg"
+                  src={Constants.skills.novice.icon}/>
+                <p className="Skills__Text">{Constants.skills.novice.name}</p>
               </div>
 
               <div className="Skill__Container">
