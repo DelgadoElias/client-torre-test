@@ -5,6 +5,7 @@ import {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {setToast} from '../../store/actions';
 import testFunction from '../../functions/testFunction';
+import config from '../../config/config';
 
 /**
  * Add user experience react Component.
@@ -28,17 +29,33 @@ export default function AddForm() {
     responsabilities: '',
   });
 
+  const {
+    URL_BASE,
+  }=config;
+
   /**
  * Add user experience react Component.
  * @param {Event} e - Event - Used for preventDefault() form's function.
  */
   async function handleSubmit(e) {
+    dispatch(setToast('Experience added successfully'));
     e.preventDefault(e);
-    await axios.post(`https://node-torre.herokuapp.com/user/userEx?id=${form.publicId}`, form);
+    await axios.post(`${URL_BASE}/user/userEx?id=${form.publicId}`, form);
     // const instance
     // TODO: Send instance to a function called 'postInAPI'
-    dispatch(setToast('Experience added successfully'));
     testFunction();
+    setForm({
+      publicId: '',
+      category: '',
+      name: '',
+      organization: '',
+      fMonth: '',
+      fYear: '',
+      tMonth: '',
+      tYear: '',
+      addInfo: '',
+      responsabilities: '',
+    });
   }
   /**
  * Add user experience react Component.
