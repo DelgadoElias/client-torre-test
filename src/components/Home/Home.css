@@ -1,15 +1,11 @@
-.Home__main-article{
+.Profile__main-article{
     background-color: #27292d;
     color: white;
     padding-bottom: 20px;
     margin: auto;
     width: 100%;
 }
-.Home__main-profile{
-    color: white;
-    margin: auto;
-}
-.Home__Profile-name{
+.Profile__User-name{
     text-shadow: 4px 2px #27292d;
 }
 
@@ -18,7 +14,7 @@
     color: #CCCDCC;
 }
 
-.Home__thumbnail{
+.Profile__thumbnail-icon{
     padding: 20px;
     margin: auto;
     width: 80%;
@@ -72,7 +68,7 @@
     border-radius: 30px;
 }
 
-.Skills__Show-btn{
+.Skills__btn-show{
     font-size: 1.7rem;
     color: white;
     width: 80%;

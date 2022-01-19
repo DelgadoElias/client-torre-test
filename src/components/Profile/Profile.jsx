@@ -35,12 +35,12 @@ export default function Profile({user}) {
   }
 
   return (<>
-    <article className="animated fadeIn fast Home__main-article">
-      <section className="Home__main-profile">
+    <article className="animated fadeIn fast Profile__main-article">
+      <section className="">
         <div>
-          <div className="Home__thumbnail">
+          <div className="Profile__thumbnail-icon">
             <svg
-              className="Home__thumbnail"
+              className="Profile__thumbnail-icon"
               viewBox="0 0 100 100"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -67,13 +67,13 @@ export default function Profile({user}) {
             </svg>
           </div>
         </div>
-        <h1 className="Home__Profile-name">
+        <h1 className="Profile__User-name">
           {user.name ? user.name : 'Not Found' }
         </h1>
       </section>
       <section className={show}>
-        <div onClick={dropSkills} className="Skills__Show-btn">
-          <button className="Skills__Show-btn">Skills</button>
+        <div onClick={dropSkills} className="Skills__btn-show">
+          <button className="Skills__btn-show">Skills</button>
           <img className="Skills__Drop-Icon" src={dropIcon}></img>
         </div>
 
