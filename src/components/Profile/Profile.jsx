@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Constants from '../Tools/constants/constants';
 import {useSelector} from 'react-redux';
+import './../Home/Home.css';
+import Experiences from './Experiences/Experiences';
 
 /**
  * Toast React Component.
@@ -32,8 +34,8 @@ export default function Profile({user}) {
     }
   }
 
-  return (
-    <article className="animated fadeIn fast">
+  return (<>
+    <article className="animated fadeIn fast Home__main-article">
       <section className="Home__main-profile">
         <div>
           <div className="Home__thumbnail">
@@ -143,6 +145,8 @@ export default function Profile({user}) {
         </div>
       </section>
     </article>
+    <Experiences></Experiences>
+  </>
   );
 };
 
