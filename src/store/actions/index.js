@@ -38,7 +38,7 @@ export function fetchUsers(publicId) {
 export function fetchUserSkills(publicId) {
   return async function(dispatch) {
     try {
-      const poder = await axios.get(`https://node-torre.herokuapp.com/user/skills?id=${publicId}`) // Hacemos al backEnd nuestro
+      const poder = await axios.get(`https://node-torre.herokuapp.com/user/skills?id=${publicId}`);
       dispatch({
         type: FETCH_USER_SKILLS,
         payload: poder.data,
@@ -60,7 +60,7 @@ export function fetchUserSkills(publicId) {
 export function fetchUserExperiences(publicId) {
   return async function(dispatch) {
     try {
-      const poder = await axios.get(`https://node-torre.herokuapp.com/user/userEx?id=${publicId}`) // Hacemos al backEnd nuestro
+      const poder = await axios.get(`https://node-torre.herokuapp.com/user/userEx?id=${publicId}`);
       dispatch({
         type: FETCH_USER_EXPERIENCES,
         payload: poder.data,
