@@ -110,7 +110,7 @@ export default function Home() {
               </div>
 
               <div className="Skills__Title">
-                <img className="Skills__Svg" src="https://img.icons8.com/ios/50/ffffff/cycling-bmx.png"/>            
+                <img className="Skills__Svg" src="https://img.icons8.com/ios/50/ffffff/cycling-bmx.png"/>
                 <p className="Skills__Text">Master/Influencer</p>
               </div>
               <div className="Skill__Container">
@@ -198,38 +198,46 @@ export default function Home() {
                       </span>
                     </div>
                     <div>
-                      {x.fromMonth ? x.fromMonth : 'Month' } {x.fromYear ? x.fromYear : 'Year'} - {x.toMonth ? x.toMonth : '' } {x.toYear !== undefined ? x.toYear : ''} 
+                      {x.fromMonth ? x.fromMonth : 'Month' } {' '}
+                      {x.fromYear ? x.fromYear : 'Year'} - {' '}
+                      {x.toMonth ? x.toMonth : '' } {' '}
+                      {x.toYear !== undefined ? x.toYear : ''}
                     </div>
                   </section>
-                )
+                );
               })
-            }
-            {
-              ExpPersonal.length === 0 ? '' 
-              :
+        }
+        {
+              ExpPersonal.length === 0 ? '' :
               ExpPersonal.map((x) => {
-
                 return (
-                  <section className="Exp__Container">
-                    <hr />
+                  <section key={x.name} className="Exp__Container">
+                    <hr/>
                     <div className="">
-                    <p className="Exp__Title">{x.name !== undefined ? x.name : ''}</p>
+                      <p className="Exp__Title">
+                        {x.name !== undefined ? x.name : ''}
+                      </p>
                     </div>
                     <div>
-                    <span>{x.organization ? x.organization : 'Not Found'  }</span>
+                      <span>
+                        {x.organization ? x.organization : 'Not Found'}
+                      </span>
                     </div>
                     <div>
-                      {x.fMonth ? x.fMonth : 'Month' } {x.fYear ? x.fYear : 'Year'} - {x.tMonth ? x.tMonth : '' } {x.tYear !== undefined ? x.tYear : ''} 
+                      {x.fMonth ? x.fMonth : 'Month' } {' '}
+                      {x.fYear ? x.fYear : 'Year'} - {' '}
+                      {x.tMonth ? x.tMonth : '' } {' '}
+                      {x.tYear !== undefined ? x.tYear : ''}
                     </div>
                   </section>
-                )
+                );
               })
-            }
-            <div className="Block">
+        }
+        <div className="Block">
 
-            </div>
+        </div>
 
-    </article>
+      </article>
     </article>
 
   );
