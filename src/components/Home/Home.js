@@ -116,7 +116,7 @@ export default function Home() {
               </div>
 
               <div className="Skills__Title">
-                <img className="Skills__Svg" 
+                <img className="Skills__Svg"
                   src={Constants.skills.master.icon}/>
                 <p className="Skills__Text">{Constants.skills.master.name}</p>
               </div>
@@ -131,7 +131,7 @@ export default function Home() {
                 }
               </div>
               <div className="Skills__Title">
-                <img className="Skills__Svg" 
+                <img className="Skills__Svg"
                   src={Constants.skills.expert.icon}/>
                 <p className="Skills__Text">{Constants.skills.expert.name}</p>
               </div>
