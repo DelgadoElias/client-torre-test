@@ -88,7 +88,7 @@ export default function Navbar() {
       <article className={`${display} Navbar__Input`}>
         <form onSubmit={(e) => handleSubmit(e)}>
           <input className="Navbar__Input-text" type="text"
-            placeholder="Search"
+            placeholder="Search by publicId ..."
             onChange={(e) => onInputChange(e)} value={search} />
           <input className="Navbar__Input-btn" type="submit" value="Search" />
         </form>
