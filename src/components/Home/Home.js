@@ -29,7 +29,7 @@ export default function Home() {
             <h1>Search a user to start</h1>
           </div>
           <section className="Land__Title">
-            <h1 className="Land__Title-main">torre</h1>
+            <h1 className="Home__Title-text">torre</h1>
             <span className="Land__Title-sub">.co</span>
           </section>
         </section>

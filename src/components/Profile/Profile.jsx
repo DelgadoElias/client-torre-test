@@ -24,13 +24,15 @@ export default function Profile({user}) {
  * Change Icon for the dropdown.
  */
   function dropSkills() {
-    setDrop(!drop);
-    if (drop === true) {
-      setShow('Skills__Main-container Complete');
-      setDropIcon(Constants.homeDropIcon.minus);
-    } else {
-      setShow('Skills__Main-container Dropdown');
-      setDropIcon(Constants.homeDropIcon.plus);
+    if (window.screen.width < 1024) {
+      setDrop(!drop);
+      if (drop === true) {
+        setShow('Skills__Main-container Complete');
+        setDropIcon(Constants.homeDropIcon.minus);
+      } else {
+        setShow('Skills__Main-container Dropdown');
+        setDropIcon(Constants.homeDropIcon.plus);
+      }
     }
   }
 
@@ -76,73 +78,93 @@ export default function Profile({user}) {
           <button className="Skills__btn-show">Skills</button>
           <img className="Skills__Drop-Icon" src={dropIcon}></img>
         </div>
+        <div className="Skills__Main-desktop-container">
+          <div className="Skills__Section-container">
+            <div className="Skills__Title">
+              <img className="Skills__Title-img"
+                src={Constants.skills.master.icon}/>
+              <p className="Skills__Title-text">
+                {Constants.skills.master.name}
+              </p>
+            </div>
+            <div className="Skill__Div-container">
+              {
+                  skills.master !== undefined ?
+                  skills.master.map((x) => {
+                    return ( <span
+                      key={x.name} className="Skills_Span-text">
+                      {x.name}
+                    </span>);
+                  }) :
+                  (<span className="Skills_Span-text">
+                      Error - Please Try Again
+                  </span>)
+              }
+            </div>
+          </div>
+          <div className="Skills__Section-container">
+            <div className="Skills__Title">
+              <img className="Skills__Title-img"
+                src={Constants.skills.expert.icon}/>
+              <p className="Skills__Title-text">
+                {Constants.skills.expert.name}
+              </p>
+            </div>
+            <div className="Skill__Div-container">
+              {
+                  skills.expert !== undefined ?
+                  skills.expert.map((x) => {
+                    return (<span
+                      key={x.name} className="Skills_Span-text">{x.name}
+                    </span>);
+                  }) :
+                  (<span className="Skills_Span-text">:c</span>)
+              }
+            </div>
+          </div>
+          <div className="Skills__Section-container">
+            <div className="Skills__Title">
+              <img className="Skills__Title-img"
+                src={Constants.skills.competitive.icon} />
+              <p className="Skills__Title-text">
+                {Constants.skills.competitive.name}
+              </p>
+            </div>
+            <div className="Skill__Div-container">
+              {
+                  skills.proficient !== undefined ?
+                  skills.proficient.map((x) => {
+                    return (<span
+                      key={x.name} className="Skills_Span-text">
+                      {x.name}
+                    </span>);
+                  }) :
+                  (<span className="Skills_Span-text">:P</span>)
+              }
+            </div>
+          </div>
+          <div className="Skills__Section-container">
+            <div className="Skills__Title">
+              <img className="Skills__Title-img"
+                src={Constants.skills.novice.icon}/>
+              <p className="Skills__Title-text">
+                {Constants.skills.novice.name}</p>
+            </div>
+            <div className="Skill__Div-container">
+              {
+                  skills.novice !== undefined ?
+                  skills.novice.map((x) => {
+                    return (<span
+                      key={x.name} className="Skills_Span-text">
+                      {x.name}
+                    </span>);
+                  }):
+                  <span className="Skills_Span-text">:O</span>
+              }
+            </div>
+          </div>
+        </div>
 
-        <div className="Skills__Title">
-          <img className="Skills__Svg"
-            src={Constants.skills.master.icon}/>
-          <p className="Skills__Text">{Constants.skills.master.name}</p>
-        </div>
-        <div className="Skill__Container">
-          {
-              skills.master !== undefined ?
-              skills.master.map((x) => {
-                return ( <span
-                  key={x.name} className="Skills__Master">{x.name}</span>);
-              }) :
-              (<span className="Skills__Master">Error - Please Try Again</span>)
-          }
-        </div>
-        <div className="Skills__Title">
-          <img className="Skills__Svg"
-            src={Constants.skills.expert.icon}/>
-          <p className="Skills__Text">{Constants.skills.expert.name}</p>
-        </div>
-
-        <div className="Skill__Container">
-          {
-              skills.expert !== undefined ?
-              skills.expert.map((x) => {
-                return (<span
-                  key={x.name} className="Skills__Expert">{x.name}
-                </span>);
-              }) :
-              (<span className="Skills__Expert">:c</span>)
-          }
-        </div>
-        <div className="Skills__Title">
-          <img className="Skills__Svg"
-            src={Constants.skills.competitive.icon} />
-          <p className="Skills__Text">
-            {Constants.skills.competitive.name}
-          </p>
-
-        </div>
-        <div className="Skill__Container">
-          {
-              skills.proficient !== undefined ?
-              skills.proficient.map((x) => {
-                return (<span
-                  key={x.name} className="Skills__Expert">{x.name}</span>);
-              }) :
-              (<span className="Skills__Expert">:P</span>)
-          }
-        </div>
-        <div className="Skills__Title">
-          <img className="Skills__Svg"
-            src={Constants.skills.novice.icon}/>
-          <p className="Skills__Text">{Constants.skills.novice.name}</p>
-        </div>
-
-        <div className="Skill__Container">
-          {
-              skills.novice !== undefined ?
-              skills.novice.map((x) => {
-                return (<span
-                  key={x.name} className="Skills__Expert">{x.name}</span>);
-              }):
-              <span className="Skills__Expert">:O</span>
-          }
-        </div>
       </section>
     </article>
     <Experiences></Experiences>

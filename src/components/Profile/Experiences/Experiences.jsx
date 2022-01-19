@@ -24,7 +24,7 @@ export default function Experiences() {
       {
               usersz.publicId === '' ?
               '' :
-              (<h5>Related Experiences</h5>)
+              (<h5 className="Exp__Tile-text">Related Experiences</h5>)
       }
       {
               ExpAPI.length === 0 ? '' :

@@ -1,5 +1,4 @@
 .Profile__main-article{
-    background-color: #27292d;
     color: white;
     padding-bottom: 20px;
     margin: auto;
@@ -7,6 +6,12 @@
 }
 .Profile__User-name{
     text-shadow: 4px 2px #27292d;
+}
+
+.Home__Title-text{
+    display: inline-flex;
+    color: white;
+    font-size: 5rem;
 }
 
 .Home__Profile-role{
@@ -34,19 +39,19 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.Skills__Svg{
+.Skills__Title-img{
     color: white;
     margin-left: 20px;
     width: 24px;
     height: 24px; 
 }
-.Skills__Text{
+.Skills__Title-text{
     margin: 0;
     margin-left: 20px;
 }
 
 
-.Skill__Container{
+.Skill__Div-container{
     width: 90%;
     margin: auto;
     display: flex;
@@ -54,18 +59,15 @@
     align-items: flex-start;
 }
 
-.Skills__Master{
+.Skills_Span-text{
     padding: 5px;
     background-color: #373b41;
     margin: 5px;
     border-radius: 30px;
 }
 
-.Skills__Expert{
-    padding: 5px;
-    background-color: #373b41;
-    margin: 5px;
-    border-radius: 30px;
+.Exp__Tile-text{
+    font-size: 1.7rem;
 }
 
 .Skills__btn-show{
@@ -98,8 +100,8 @@
 .Loading__Main{
     margin: auto;
     width: 80%;
-    margin-top: 50px;
-    padding: 20px;
+    color: white;
+    padding: 40px;
     border-radius: 60px;
     margin-bottom: 50%;
 
@@ -126,20 +128,43 @@
     margin-bottom: 40px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1024px) {
+
+    .Skills__Section-container{
+        background-color: rgb(37, 36, 36);
+        border-radius: 30px;
+        min-height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+        width: 20%;
+        padding: 20px;
+    }
+
+    .Exp__Tile-text{
+        font-size: 2.5rem;
+        padding: 20px;
+    }
+
+    .Skills__Main-desktop-container{
+        padding: 20px;
+        width: 90%;
+        height: 1000px;
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+    }
 
     .Home__main-article{
-        background-color: #27292d;
         color: white;
         padding-bottom: 20px;
         width: 40%;
     }
 
 
-    .Home__thumbnail{
+    .Profile__thumbnail-icon{
         padding: 20px;
         margin: auto;
-        width: 60%;
+        width: 50%;
     
     }
 
@@ -154,10 +179,9 @@
         display: inline-flex;
     }
 
-    .Dropdown {
-        height: 50px;
-        overflow: hidden;
-    }
 
+    .Dropdown {
+        height: 100%;
+    }
 
  }
