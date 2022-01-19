@@ -28,9 +28,9 @@ export default function Home() {
           <div className="Loading__Main">
             <h1>Search a user to start</h1>
           </div>
-          <section className="Land__Title">
+          <section className="">
             <h1 className="Home__Title-text">torre</h1>
-            <span className="Land__Title-sub">.co</span>
+            <span className="Home__Title-sub">.co</span>
           </section>
         </section>
       ) : (

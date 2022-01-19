@@ -76,7 +76,10 @@ export default function Profile({user}) {
       <section className={show}>
         <div onClick={dropSkills} className="Skills__btn-show">
           <button className="Skills__btn-show">Skills</button>
-          <img className="Skills__Drop-Icon" src={dropIcon}></img>
+          { window.screen.width < 1024 ?
+            <img className="Skills__Drop-Icon" src={dropIcon}></img> :
+            <span></span>
+          }
         </div>
         <div className="Skills__Main-desktop-container">
           <div className="Skills__Section-container">

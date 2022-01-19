@@ -1,11 +1,11 @@
 .Profile__main-article{
     color: white;
-    padding-bottom: 20px;
     margin: auto;
     width: 100%;
 }
 .Profile__User-name{
     text-shadow: 4px 2px #27292d;
+    padding: 20px;
 }
 
 .Home__Title-text{
@@ -14,9 +14,9 @@
     font-size: 5rem;
 }
 
-.Home__Profile-role{
-    margin-bottom: 15px;
-    color: #CCCDCC;
+.Home__Title-sub{
+    font-size: 3rem;
+    color: #b8c34d;
 }
 
 .Profile__thumbnail-icon{
@@ -103,7 +103,7 @@
     color: white;
     padding: 40px;
     border-radius: 60px;
-    margin-bottom: 50%;
+    margin-bottom: 100px;
 
 }
 
@@ -178,10 +178,7 @@
         border-radius: 30px;
         display: inline-flex;
     }
-
-
     .Dropdown {
         height: 100%;
     }
-
  }
